@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="25.981009">
-<testcase classname="Search and place order for vegetable" name="Search for items and move to checkout page" time="13.049487">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="33.427388">
+<testcase classname="Search and place order for vegetable" name="Search for items and move to checkout page" time="20.114235">
 <system-out><![CDATA[Given User is on Greencart landing page.....................................passed
 When User search for Brinjal Vegetable......................................passed
 And added items to cart.....................................................passed
@@ -8,7 +8,7 @@ And user proceeded to Checkout page for purchase............................pass
 Then verify selected Brinjal items are dispalyed in checkout page...........passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and place order for vegetable" name="Search for items and move to checkout page 2" time="12.931522">
+<testcase classname="Search and place order for vegetable" name="Search for items and move to checkout page 2" time="13.313153">
 <system-out><![CDATA[Given User is on Greencart landing page.....................................passed
 When User search for Beetroot Vegetable.....................................passed
 And added items to cart.....................................................passed

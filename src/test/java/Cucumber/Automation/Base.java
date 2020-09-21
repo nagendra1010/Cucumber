@@ -15,9 +15,6 @@ public class Base {
 	
 	public static WebDriver getDriver() throws IOException
 	{
-		Properties prop=new Properties();
-		FileInputStream fis=new FileInputStream("C:\\Users\\pc\\eclipse-workspace\\Automation\\configuration\\global.properties");
-		prop.load(fis);
 		System.setProperty("webdriver.chrome.driver",StaticVariable.chromeDriverpath);
 		driver=new ChromeDriver();
         driver.get(StaticVariable.CaseHandlingSystem_URL); 
