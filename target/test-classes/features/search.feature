@@ -17,4 +17,4 @@ Then verify selected <Name> items are dispalyed in checkout page
 Examples:
 |Name	 |
 |Brinjal |
-|Beetroot1|
+|Beetroot|

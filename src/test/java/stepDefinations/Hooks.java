@@ -17,16 +17,29 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 
 public class Hooks extends Base {
+	ReusableFunctions.ConfigFileReader configReader = new ReusableFunctions.ConfigFileReader();
 	@Before
 	public void setUpScenario(Scenario scenario) {
-		System.out.println("Before scenario");
 		StaticVariable.message = scenario;
+		System.out.println("RUNNING SCENARIO --> " + scenario.getName());
+		StaticVariable.SCENARIO_NAME = scenario.getName().trim();
+		// Store all the TestProperties parameters in Static Variables
+		StaticVariable.LOCALPATH = configReader.getPropertyFromPropertiesFile("LOCALPATH");
+		StaticVariable.BROWSER = configReader.getPropertyFromPropertiesFile("BROWSER");
+		StaticVariable.SCREENSHOTS = configReader.getPropertyFromPropertiesFile("SCREENSHOTS");
+		StaticVariable.HIGHLIGHTS = configReader.getPropertyFromPropertiesFile("HIGHLIGHTS");
+		StaticVariable.chromeDriverpath = configReader.getPropertyFromPropertiesFile("chromeDriverpath");
+		StaticVariable.OBJECTREPOSITORY = configReader.getPropertyFromPropertiesFile("OBJECTREPOSITORY");
+		StaticVariable.CaseHandlingSystem_URL = configReader.getPropertyFromPropertiesFile("URL");
+		StaticVariable.MAX_WAIT_TIME = configReader.getPropertyFromPropertiesFile("MAX_WAIT_TIME");
+		StaticVariable.TESTDATAREPO = configReader.getPropertyFromPropertiesFile("TESTDATA");
+		StaticVariable.SHAREDRESULTS = configReader.getPropertyFromPropertiesFile("SHAREDRESULTS");
+		StaticVariable.SHAREDPATH = configReader.getPropertyFromPropertiesFile("SHAREDPATH");
 	}
 
 	@After
 	public void embedScreenshot(Scenario scenario) throws IOException 
 	{
-		System.out.println("After scenario");
 		if (scenario.isFailed()) {
 			try {
 				byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
@@ -35,7 +48,7 @@ public class Hooks extends Base {
 				TakesScreenshot ts = (TakesScreenshot) driver;
 				File source = ts.getScreenshotAs(OutputType.FILE);
 				File destinationPath = new File(
-				System.getProperty("user.dir")+StaticVariable.PATH +System.currentTimeMillis()+ scenario.getName() + ".jpg");
+				System.getProperty("user.dir")+StaticVariable.LOCALPATH +"Screenshot\\"+System.currentTimeMillis()+ scenario.getName() + ".jpg");
 				FileUtils.copyFile(source, destinationPath);
 				Reporter.addScreenCaptureFromPath(destinationPath.toString());
 				driver.quit();

@@ -1,8 +1,10 @@
 package ReusableFunctions;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -22,7 +24,7 @@ public class Reusable extends StaticVariable{
 	
 	public static void takeScreenshot(WebDriver driver, long ms)
 	{
-		if (StaticVariable.screenshot.equalsIgnoreCase("True")) 
+		if (StaticVariable.SCREENSHOTS.equalsIgnoreCase("True")) 
 		{
 			int maxWaitTime = Integer.parseInt(StaticVariable.MAX_WAIT_TIME);
 			// waitForelement(ObjectName, pageName);
@@ -32,7 +34,7 @@ public class Reusable extends StaticVariable{
 				TakesScreenshot ts = (TakesScreenshot) driver;
 				File source = ts.getScreenshotAs(OutputType.FILE);
 				File destinationPath = new File(
-				System.getProperty("user.dir")+StaticVariable.PATH + ms + ".jpg");
+				System.getProperty("user.dir")+StaticVariable.LOCALPATH +"Screenshot"+"\\"+ ms + ".jpg");
 				FileUtils.copyFile(source, destinationPath);
 				Reporter.addScreenCaptureFromPath(destinationPath.toString());
 				byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
@@ -55,11 +57,12 @@ public class Reusable extends StaticVariable{
 	}
 	public static void deleteDir() {
 		try {
-            File f = new File("C:\\Users\\pc\\eclipse-workspace\\Automation\\target\\cucumber-reports\\Screenshot");
+            File f = new File("target\\cucumber-reports\\Screenshot");
             FileUtils.forceDelete(f); //delete directory
             FileUtils.forceMkdir(f); //create directory
         } catch (IOException e) {
             e.printStackTrace();
         } 
 	}
+	
 }
