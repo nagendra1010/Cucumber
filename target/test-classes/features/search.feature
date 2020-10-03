@@ -18,3 +18,16 @@ Examples:
 |Name	 |
 |Brinjal |
 |Beetroot|
+
+@MyTest
+Scenario Outline: Facebook login
+Given User is on Facebook login page
+When User logins with <Username> and <Password>
+And User proceeds to Home page <Name>
+Then User logsout
+
+Examples:
+|Username 					|Password	|Name			|
+|nagendra1010@gmail.com    	|Kora*1990  |Nagendra Sahoo	|
+
+

@@ -17,6 +17,7 @@ public class Base {
 	{
 		System.setProperty("webdriver.chrome.driver",StaticVariable.chromeDriverpath);
 		driver=new ChromeDriver();
+		driver.manage().window().maximize();
         driver.get(StaticVariable.CaseHandlingSystem_URL); 
         return driver;
 	}

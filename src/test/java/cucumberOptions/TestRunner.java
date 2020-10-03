@@ -20,7 +20,7 @@ import com.cucumber.listener.ExtentCucumberFormatter;
 		strict = true,
 		features = "src/test/java/features",
 		glue= "stepDefinations",
-		tags="@RegressionTest",
+		tags="@MyTest",
 		monochrome=true,
 		plugin= {"com.cucumber.listener.ExtentCucumberFormatter:","json:target/cucumber.json","junit:target/cukes.xml"})
 

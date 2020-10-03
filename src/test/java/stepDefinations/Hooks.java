@@ -30,7 +30,7 @@ public class Hooks extends Base {
 		StaticVariable.HIGHLIGHTS = configReader.getPropertyFromPropertiesFile("HIGHLIGHTS");
 		StaticVariable.chromeDriverpath = configReader.getPropertyFromPropertiesFile("chromeDriverpath");
 		StaticVariable.OBJECTREPOSITORY = configReader.getPropertyFromPropertiesFile("OBJECTREPOSITORY");
-		StaticVariable.CaseHandlingSystem_URL = configReader.getPropertyFromPropertiesFile("URL");
+		StaticVariable.CaseHandlingSystem_URL = configReader.getPropertyFromPropertiesFile("facebookURL");
 		StaticVariable.MAX_WAIT_TIME = configReader.getPropertyFromPropertiesFile("MAX_WAIT_TIME");
 		StaticVariable.TESTDATAREPO = configReader.getPropertyFromPropertiesFile("TESTDATA");
 		StaticVariable.SHAREDRESULTS = configReader.getPropertyFromPropertiesFile("SHAREDRESULTS");
