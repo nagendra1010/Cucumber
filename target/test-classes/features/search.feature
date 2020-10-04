@@ -20,14 +20,25 @@ Examples:
 |Beetroot|
 
 @MyTest
-Scenario Outline: Facebook login
+Scenario: Facebook login
 Given User is on Facebook login page
-When User logins with <Username> and <Password>
-And User proceeds to Home page <Name>
-Then User logsout
-
-Examples:
-|Username 					|Password	|Name			|
-|nagendra1010@gmail.com    	|Kora*1990  |Nagendra Sahoo	|
+When User types "Username" in the field "username"
+|PageName|
+|Login|
+And User types "Password" in the field "password"
+|PageName|
+|Login|
+And User clicks on "login"
+|PageName|
+|Login|
+And User validates "homeElement"
+|PageName|
+|Login|
+And User clicks on "arrowButton"
+|PageName|
+|Login|
+Then User clicks on "logOut"
+|PageName|
+|Login|
 
 

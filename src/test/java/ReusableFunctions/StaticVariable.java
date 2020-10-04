@@ -10,7 +10,7 @@ public class StaticVariable {
 	public static String chromeDriverpath=null;
 	public static String OBJECTREPOSITORY=null;
 	public static String CaseHandlingSystem_URL=null;
-	public static int EXCELLASTROWNUM=0;
+	public static int EXCELLASTROWNUM=0;	
 	public static String MAX_WAIT_TIME="";
 	public static String TESTDATAREPO=null;
 	public static String SCENARIO_NAME=null;

@@ -39,7 +39,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -53,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Oct 2, 2020 09:40:09 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Oct 4, 2020 06:30:16 PM</span>
 				</a>
 			</li>
 			<li>
@@ -79,7 +78,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -140,10 +138,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -155,10 +153,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -170,10 +168,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>3</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>7</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -187,71 +185,111 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Search and place order for vegetable</span>
-						<span class='test-time'>Oct 2, 2020 09:40:09 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Oct 4, 2020 06:30:16 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 0m 27s+706ms</span>
+<div class='scenario node' test-id='2' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@MyTest</span>
+	</div>
+	<span class='duration right label'>0h 0m 49s+722ms</span>
 	<div class='desc'>
-		<b>ScenarioOutline</b>
+		<b>Scenario</b>
 		<span class="desc-text">Facebook login</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario fail' status='fail'>
-			<div class='category-list'>
-				<span class='category label white-text'>@MyTest</span>
-			</div>
+		<li test-id='3' class='node given pass' status='pass'>
 			
-			<b>Scenario</b>
+			<b>Given</b>
 			
-			<span class="bdd-step-name">Facebook login</span>
+			<span class="bdd-step-name">Given User is on Facebook login page</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\pc\eclipse-workspace\Automation\target\cucumber-reports\Screenshot\1601816430715.jpg"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>passed</div>
 			
-				<ul class='steps'>
-					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given User is on Facebook login page</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='5' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When User logins with nagendra1010@gmail.com and Kora*1990</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='6' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User proceeds to Home page Nagendra Sahoo</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='7' class='node then fail' status='fail'><b>Then</b>
-						<span class="bdd-step-name">Then User logsout</span>
-						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="C:\Users\pc\eclipse-workspace\Automation\target\cucumber-reports\Screenshot\1601655037915Facebook login.jpg"><i class='material-icons'>panorama</i></a></li>
-						</ul>
-							<div class='pre'><textarea>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <i class="hu5pjgll lzf7d6o1 sp_fDmBvoTd0yc sx_7adb05"></i> is not clickable at point (1313, 30). Other element would receive the click: <div class="iqfcb0g7 tojvnm2t a6sixzi8 k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y l9j0dhe7 iyyx5f41 a8s20v7p" data-testid="Keycommand_wrapper_ModalLayer" tabindex="-1">...</div>
-  (Session info: chrome=85.0.4183.121)
-Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
-System info: host: 'DESKTOP-I306DP3', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:52682}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: aae8a08b7b1664fa28e4847f5f21c148
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at stepDefinations.newStepDefination.user_logsout(newStepDefination.java:44)
-	at ✽.Then User logsout(search.feature:27)
-</textarea></div>
-					</li>
-				</ul>
+		</li>
+		<li test-id='4' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User types "Username" in the field "username"</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\pc\eclipse-workspace\Automation\target\cucumber-reports\Screenshot\1601816438642.jpg"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'><table><tr><td>PageName</td></tr><tr><td>Login</td></tr></table></div>
+				<div class='pre'>nagendra1010@gmail.com is entered in the username</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='5' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User types "Password" in the field "password"</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\pc\eclipse-workspace\Automation\target\cucumber-reports\Screenshot\1601816441595.jpg"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'><table><tr><td>PageName</td></tr><tr><td>Login</td></tr></table></div>
+				<div class='pre'>Kora*1990 is entered in the password</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='6' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User clicks on "login"</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\pc\eclipse-workspace\Automation\target\cucumber-reports\Screenshot\1601816443706.jpg"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'><table><tr><td>PageName</td></tr><tr><td>Login</td></tr></table></div>
+				<div class='pre'>login is clicked successfully!!</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='7' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User validates "homeElement"</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\pc\eclipse-workspace\Automation\target\cucumber-reports\Screenshot\1601816455786.jpg"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'><table><tr><td>PageName</td></tr><tr><td>Login</td></tr></table></div>
+				<div class='pre'>The homeElement page is displayed successfully</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='8' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User clicks on "arrowButton"</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\pc\eclipse-workspace\Automation\target\cucumber-reports\Screenshot\1601816459352.jpg"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'><table><tr><td>PageName</td></tr><tr><td>Login</td></tr></table></div>
+				<div class='pre'>arrowButton is clicked successfully!!</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='9' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then User clicks on "logOut"</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\pc\eclipse-workspace\Automation\target\cucumber-reports\Screenshot\1601816465417.jpg"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'><table><tr><td>PageName</td></tr><tr><td>Login</td></tr></table></div>
+				<div class='pre'>logOut is clicked successfully!!</div>
+				<div class='pre'>passed</div>
+			
 		</li>
 	</ul>
 </div>
@@ -311,13 +349,13 @@ Session ID: aae8a08b7b1664fa28e4847f5f21c148
 					<div class='category-heading'>
 						<span class='category-name'>@MyTest</span>
 						<span class='category-status right'>
-							<span class='label fail'>1</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -332,9 +370,9 @@ Session ID: aae8a08b7b1664fa28e4847f5f21c148
 								</thead>
 								<tbody>
 									<tr>
-										<td>Oct 2, 2020 09:40:09 PM</td>
-										<td class='linked' test-id='3'>Search and place order for vegetable.Facebook login.Facebook login</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Oct 4, 2020 06:30:16 PM</td>
+										<td class='linked' test-id='2'>Search and place order for vegetable.Facebook login</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -353,88 +391,6 @@ Session ID: aae8a08b7b1664fa28e4847f5f21c148
 	</div>
 </div>
 <!-- category view -->
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>org.openqa.selenium.ElementClickInterceptedException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Oct 2, 2020 09:40:30 PM</td>
-                                                        <td class='linked' test-id='7'>Search and place order for vegetable.Facebook login.Facebook login.Then User logsout</td>
-                                                        <td><pre><textarea>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <i class="hu5pjgll lzf7d6o1 sp_fDmBvoTd0yc sx_7adb05"></i> is not clickable at point (1313, 30). Other element would receive the click: <div class="iqfcb0g7 tojvnm2t a6sixzi8 k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y l9j0dhe7 iyyx5f41 a8s20v7p" data-testid="Keycommand_wrapper_ModalLayer" tabindex="-1">...</div>
-  (Session info: chrome=85.0.4183.121)
-Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
-System info: host: 'DESKTOP-I306DP3', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:52682}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: aae8a08b7b1664fa28e4847f5f21c148
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at stepDefinations.newStepDefination.user_logsout(newStepDefination.java:44)
-	at ✽.Then User logsout(search.feature:27)
-</textarea></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -456,25 +412,25 @@ Session ID: aae8a08b7b1664fa28e4847f5f21c148
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>7</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 2, 2020 09:40:09 PM</div>
+					<div class='panel-lead'>Oct 4, 2020 06:30:16 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 2, 2020 09:40:38 PM</div>
+			 		<div class='panel-lead'>Oct 4, 2020 06:31:07 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 29s+827ms</div>
+					<div class='panel-lead'>0h 0m 50s+821ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -527,11 +483,11 @@ Session ID: aae8a08b7b1664fa28e4847f5f21c148
 						</tr>
 						<tr>
 							<td>@MyTest</td>
-							<td>0</td>
 							<td>1</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 					</table>
@@ -547,31 +503,31 @@ Session ID: aae8a08b7b1664fa28e4847f5f21c148
 
 		<script>
 			var statusGroup = {
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 0,
-				failChild: 1,
+				passChild: 1,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 1,
+				exceptionsChild: 0,
 				
-				passGrandChild: 3,
-				failGrandChild: 1,
+				passGrandChild: 7,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 1,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		
